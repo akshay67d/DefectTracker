@@ -1,0 +1,14 @@
+<mat-accordion multi="true" *ngIf="defects.length > 0">
+  <mat-expansion-panel *ngFor="let defect of defects">
+    <mat-expansion-panel-header>
+     {{defect.title}}
+    </mat-expansion-panel-header>
+    <p>{{defect.content}}</p>
+    <mat-action-row>
+      <!-- <button mat-button color="primary">EDIT</button> -->
+      <button (click)="deleteDefect(defect.title)"
+      mat-button color="warn">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="defects.length <= 0">No defects added yet!</p>

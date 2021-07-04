@@ -1,0 +1,31 @@
+
+<!-- <h2>Login</h2> -->
+<div class="Warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+<!-- <button mat-raised-button (click)="openDialog()"></button> -->
+<div class="content">
+<mat-card>
+   <div>
+      <h2 style="color: green;">Login Here</h2>
+   </div>
+
+<mat-card-content >
+  <form class="my-form">
+     <mat-form-field class="full-width" appearance="outline" >
+            <mat-label>Username</mat-label>
+            <input  matInput  placeholder="Enter UserName"  name="username" [(ngModel)]="username"  required>
+         </mat-form-field>
+         <br>
+         <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input  matInput type="password"  placeholder="Enter Password" name="password" [(ngModel)]="password"  required>
+         </mat-form-field>
+   
+          <button class="btnClass" mat-raised-button color="primary" (click) = handleLogin()>Login</button>
+        
+      </form>
+</mat-card-content>
+</mat-card>
+</div>
+
+
+ 

@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onAddDefect(postDefect)" #postDefect="ngForm">
+    <mat-form-field>
+        <input id="Title"
+          matInput
+          type="text"
+          name="title"
+          ngModel
+          required
+          minlength="3"
+          placeholder="Defect Title"
+          #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <textarea
+          matInput
+          rows="4"
+          name="description"
+          ngModel
+          required
+          placeholder="Defect Description"
+          #description="ngModel"></textarea>
+        <mat-error *ngIf="description.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+          <br>
+      <button class="buttonStyle"
+        mat-raised-button
+        color="accent"
+        type="submit">Save Defect</button>
+
+
+  </form>
+
+
+</mat-card>

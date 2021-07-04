@@ -1,0 +1,29 @@
+.space{
+    flex: 1 1 auto;
+}
+
+.btnClass{
+    font-size: medium;
+}
+
+
+@media (max-width: 576px) {
+    .desktopmenu{
+        display: none;
+        
+
+    }
+    .btnClass{
+        font-size: small;
+        color: black;
+        
+    }
+    
+  }
+
+  @media (min-width: 576px) {
+    .mobilemenu{
+        display: none;
+    }
+    
+  }

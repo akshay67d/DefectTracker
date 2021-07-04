@@ -1,0 +1,37 @@
+
+
+
+<mat-toolbar color="primary">
+    <span class="defectT"> Defect Tracking App</span>
+    <span class="space"></span>
+
+  
+  <button  *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass desktopmenu" mat-button color="accent"  routerLink="/defectCreate/akshay"
+  >create Defect</button>
+
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass desktopmenu" mat-button color="accent"  routerLink="/defectList"
+  >Defect List </button>
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass desktopmenu" mat-button color="accent"  routerLink="/dashboard"
+  >Dashboard </button>
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass desktopmenu" mat-button color="accent"  routerLink="/logout"
+  >Logout </button>
+  <button *ngIf="!hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass desktopmenu" mat-button color="accent"  routerLink="/login"
+  >Login </button>
+  
+  <button mat-button class="mobilemenu" [matMenuTriggerFor]="menu">Menu</button>
+
+<mat-menu class="mobilemenu" #menu="matMenu">
+  <button  *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass" mat-button color="accent"  routerLink="/defectCreate/akshay"
+  >create Defect</button>
+
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass" mat-button color="accent"  routerLink="/defectList"
+  >Defect List </button>
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass" mat-button color="accent"  routerLink="/dashboard"
+  >Dashboard </button>
+  <button *ngIf="hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass" mat-button color="accent"  routerLink="/logout"
+  >Logout </button>
+  <button *ngIf="!hardcodedAuthenticatioService.isUserLoggedIn()" class="btnClass" mat-button color="accent"  routerLink="/login"
+  >Login </button>
+</mat-menu>
+
+</mat-toolbar>
